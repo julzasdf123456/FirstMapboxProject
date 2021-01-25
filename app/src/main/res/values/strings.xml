@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">First Mapbox Project</string>
+    <string name="mapbox_access_token">pk.eyJ1IjoianVsaW9sb3BleiIsImEiOiJja2s5Y25wdTMwN3EwMm9tbjJrdTN5NTQ0In0.pg5Aji5JKMZRycHNp6mAMg</string>
+</resources>
