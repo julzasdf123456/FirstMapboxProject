@@ -13,4 +13,14 @@
 
     </com.mapbox.mapboxsdk.maps.MapView>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/centerLoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_my_location_24"
+        android:tint="@color/colorWhite"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"/>
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
