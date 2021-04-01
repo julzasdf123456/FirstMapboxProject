@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardElevation="3dp"
+        app:contentPadding="10dp"
+        android:theme="@style/Theme.MaterialComponents.Light"
+        android:layout_gravity="top|left"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/latDisplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lat :"
+                android:textSize="12dp"/>
+
+            <TextView
+                android:id="@+id/longDisplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Long: "
+                android:textSize="12dp"/>
+
+            <TextView
+                android:id="@+id/altDisplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alt: "
+                android:textSize="12dp"/>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!--   DRIVING MODE OPTIONS -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/drivingModeOpts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardElevation="3dp"
+        app:contentPadding="10dp"
+        android:theme="@style/Theme.MaterialComponents.Light"
+        android:layout_gravity="bottom|left"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="60dp"
+        android:layout_marginLeft="5dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Driving Mode Options"
+                android:textSize="12dp"/>
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/trackMode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="DRIVE"
+                        android:drawableLeft="@drawable/ic_baseline_navigation_24"
+                        android:drawablePadding="5dp"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_weight="1"/>
+                    <Button
+                        android:id="@+id/addRoute"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="NEW"
+                        android:drawableLeft="@drawable/ic_baseline_add_location_24"
+                        android:drawableTint="@color/colorAccent"
+                        android:drawablePadding="5dp"
+                        android:textColor="@color/colorAccent"
+                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                        android:layout_weight="1"/>
+
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/colorWhite">
+
+        <com.mapbox.mapboxsdk.maps.MapView
+            android:id="@+id/mapViewHome"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:mapbox_cameraZoom="15" />
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="bottom"
+        android:background="@color/colorPrimary"
+        android:elevation="3dp"
+        app:menu="@menu/home_bottom_nav"
+        app:itemBackground="@color/colorPrimary"
+        app:itemIconTint="@android:color/white"
+        app:itemTextColor="@android:color/white"  />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

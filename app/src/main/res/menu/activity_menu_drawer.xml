@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/mainMenu">
+        <item android:id="@+id/home"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="Home" />
+        <item android:id="@+id/downloadMap"
+            android:icon="@drawable/ic_baseline_cloud_download_24"
+            android:title="Download Offline Map" />
+    </group>
+
+    <group android:id="@+id/secondaryMenu">
+        <item android:id="@+id/archiveMenu"
+            android:icon="@drawable/ic_baseline_archive_24"
+            android:title="Archives" />
+    </group>
+</menu>
